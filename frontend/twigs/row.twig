@@ -1,0 +1,11 @@
+    <td>{{ data.full_name }}</td>
+    <td>{{ data.address }}</td>
+    <td>{{ data.phone }}</td>
+    <td>
+        <button class="btn btn-primary" onClick ="editRow_btn('{{key}}');" title="Редактировать строку">
+            <i class="fas fa-edit"></i>
+        </button>                
+        <button class="btn btn-danger" onClick ="deleteRow_btn('{{key}}');" title="Удалить строку">
+            <i class="fas fa-trash"></i>
+        </button>
+    </td>

@@ -1,0 +1,58 @@
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Тестовое задание - Таблица данных">
+        <meta name="author" content="Радик Хайдаров">
+        <title>Тестовое задание - Таблица данных</title>
+        <link href="css/fonts.min.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav">
+                <div class="filter input-group">
+                    <button class="btn btn-info" id="addRows" title="Добавить строки">
+                        <i class="fas fa-sync"></i>
+                    </button>
+                    <button class="btn btn-primary" id="addRow" title="Добавить строку">
+                        <i class="fas fa-plus"></i>
+                    </button>                
+                    <button class="btn btn-danger" id="delRows" title="Удалить все">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                        <th>Наименование учреждения</th>
+                        <th >Адрес</th>
+                        <th >Телефон</th>
+                        <th >&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody id="dataTable">
+                </tbody>
+            </table>
+        </div>
+        <!-- Modal -->
+        <div id="rowModal" class="modal" data-id="0">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Данные</h3>
+                <input type="text" class="form-control modal-control" placeholder="Наименование учреждения" id="fullNameValue"><br>
+                <input type="text" class="form-control modal-control" placeholder="Адрес" id="addressValue"><br>
+                <input type="text" class="form-control modal-control" placeholder="Телефон" id="phoneValue"><br>
+                <div class="nav">
+                    <button class="btn btn-info btn-modal " id="okBtn" title="Сохранить">OK</button>
+                    <button class="btn btn-cancel btn-modal " id="cancelBtn" title="Отмена">Отмена</button>
+                </div>
+            </div>
+        </div>
+        <!-- JavaScript
+        ================================================== -->
+        <script src="js/twig.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
