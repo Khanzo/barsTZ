@@ -6,11 +6,10 @@
 -ФИО<br>
 -Специальность<br>
 -Общая заработная плата за 2019 год<br>
-
 Выводить информацию только по тем врачам, у которых сумма заработной платы превышает 2500 руб. за 2019 год.<br>
 Решение:<br>
-SELECT `doctors`.`FULL_NAME`, `doctors`.`SPEC`, SUM(`transactions`.`SUMM`) as SUMMA  FROM `transactions`, `doctors` WHERE `transactions`.DOC_ID = `doctors`.ID and YEAR(`transactions`.`DATE`) = 2019 GROUp BY `transactions`.DOC_ID HAVING SUM(`transactions`.`SUMM`) > 2500<br>
---------------------------------------
+SELECT `doctors`.`FULL_NAME`, `doctors`.`SPEC`, SUM(`transactions`.`SUMM`) as SUMMA  FROM `transactions`, `doctors` WHERE `transactions`.DOC_ID = `doctors`.ID and YEAR(`transactions`.`DATE`) = 2019 GROUp BY `transactions`.DOC_ID HAVING SUM(`transactions`.`SUMM`) > 2500<br><br>
+
 Второе тестовое задание для бэкенд-разработчика<br>
 Необходимо найти длину пути автомобиля, за все дни.<br>
 Решение:<br>
